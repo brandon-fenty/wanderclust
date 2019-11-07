@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { BlogComponent } from './view/blog/blog.component';
 import { BlogService } from './services/blog-service.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavBar } from './common/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlogComponent
+    BlogComponent,
+    NavBar
   ],
   imports: [
     BrowserModule,
