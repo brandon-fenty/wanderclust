@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BlogComponent } from './view/blog/blog.component';
+import { BlogService } from './services/blog-service.component';
+import { HttpClientModule } from '@angular/common/http';
+import { Config } from './services/config.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    BlogService,
+    Config
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
