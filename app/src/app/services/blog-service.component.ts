@@ -9,18 +9,15 @@ const API_URL = environment.apiUrl;
 
 @Injectable()
 export class BlogService {
-    private apiUrl: string;
+    allPosts: any[];
 
     constructor(private httpClient: HttpClient) {
+        this.getAllPosts()
+            .subscribe(res => this.allPosts = res);
     }
 
-    httpOptions = {
-        headers: new HttpHeaders({
-          'Content-Type':  'application/json'
-        })
-    };
-
-    public getAll(): Observable<BlogPost> {
-        return this.httpClient.get<BlogPost>(API_URL).pipe();
+    public getAllPosts(): Observable<BlogPost[]> {
+        let res = this.httpClient.get<BlogPost[]>(API_URL);
+        return res;
     }
 }
