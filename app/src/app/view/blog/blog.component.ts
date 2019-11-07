@@ -4,7 +4,8 @@ import { BlogPost } from 'src/app/model/blog-post.model';
 
 @Component({
     selector: 'blog-component',
-    templateUrl: './blog.component.html'
+    templateUrl: './blog.component.html',
+    styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
 
@@ -19,7 +20,7 @@ export class BlogComponent implements OnInit {
     }
 
     callBlogService() {
-
-        console.log('blog array', this.blogService.allPosts);
+        this.blogService.getAllPosts()
+            .subscribe(res => this.blogPosts = res);       
     }
 }
