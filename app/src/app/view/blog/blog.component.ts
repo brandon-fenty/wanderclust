@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 import { BlogService } from 'src/app/services/blog-service.component';
 import { BlogPost } from 'src/app/model/blog-post.model';
 import { HttpClient, HttpHandler } from '@angular/common/http';
-import { Config } from 'src/app/services/config.component';
 
 @Component({
     selector: 'blog-component',

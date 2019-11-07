@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BlogComponent } from './view/blog/blog.component';
 import { BlogService } from './services/blog-service.component';
 import { HttpClientModule } from '@angular/common/http';
-import { Config } from './services/config.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { Config } from './services/config.component';
     HttpClientModule
   ],
   providers: [
-    BlogService,
-    Config
+    BlogService
   ],
   bootstrap: [AppComponent]
 })

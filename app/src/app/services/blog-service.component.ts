@@ -1,16 +1,17 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Config } from './config.component';
 import { Observable } from 'rxjs';
 import { BlogPost } from '../model/blog-post.model';
+import { environment } from 'src/environments/environment';
+
+const API_URL = environment.apiUrl;
 
 @Injectable()
 export class BlogService {
-    private url: string;
+    private apiUrl: string;
 
-    constructor(private httpClient: HttpClient, private config: Config) {
-        this.url = config.endpoint;
+    constructor(private httpClient: HttpClient) {
     }
 
     httpOptions = {
@@ -20,6 +21,6 @@ export class BlogService {
     };
 
     public getAll(): Observable<BlogPost> {
-        return this.httpClient.get<BlogPost>(this.url).pipe();
+        return this.httpClient.get<BlogPost>(API_URL).pipe();
     }
 }
