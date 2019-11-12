@@ -7,6 +7,9 @@ import { BlogComponent } from './view/blog/blog.component';
 import { BlogService } from './services/blog-service.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavBar } from './common/nav-bar/nav-bar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './modules/material.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { NavBar } from './common/nav-bar/nav-bar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     BlogService

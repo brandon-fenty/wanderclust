@@ -1,10 +1,12 @@
-.navbar {
-    width: 100%;
-    background-color: slategray;
+.mat-sidenav-container {
+    height: 100%;
 }
 
-a {
-    margin: 1em 1em;
-    text-decoration: none;
-    display: inline-block;
+mat-sidenav, mat-sidenav-content {
+    padding: 16px;
+}
+
+mat-sidenav {
+    background-color: slateblue;
+    width: 200px;
 }

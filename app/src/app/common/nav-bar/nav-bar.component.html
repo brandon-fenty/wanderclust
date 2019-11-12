@@ -1,3 +1,8 @@
-<nav class="navbar">
-    <a href="/">Home</a>
-</nav>
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]="navOpened">
+        Wanderclust
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <button (click)="openNavbarHandler()">Menu</button>
+    </mat-sidenav-content>
+</mat-sidenav-container>

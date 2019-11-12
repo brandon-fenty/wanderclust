@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { componentFactoryName } from '@angular/compiler';
 
 @Component({
     selector: 'nav-bar-component',
@@ -7,5 +6,9 @@ import { componentFactoryName } from '@angular/compiler';
     styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBar {
+    navOpened: boolean = false;
 
+    openNavbarHandler() {
+        this.navOpened = !this.navOpened;
+    }
 }
