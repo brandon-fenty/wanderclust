@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogComponent } from './components/blog/blog.component';
 import DateUtil from './utility/date-util';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { FroalaViewModule, FroalaEditorModule} from 'angular-froala-wysiwyg';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { CreatePostComponent } from './create-post/create-post.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FroalaEditorModule.forRoot(), 
+    FroalaViewModule.forRoot()
   ],
   providers: [
     BlogService,
