@@ -17,4 +17,9 @@ export class BlogService {
         let res = this.httpClient.get<BlogPost[]>(API_URL);
         return res;
     }
+
+    public createNewPost(newPost: BlogPost): Observable<Object> {
+        let res = this.httpClient.post(API_URL + '/createNewPost', newPost);
+        return res;
+    }
 }

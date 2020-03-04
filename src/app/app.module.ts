@@ -6,11 +6,14 @@ import { AppComponent } from './app.component';
 import { BlogService } from './service/blog.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogComponent } from './components/blog/blog.component';
+import DateUtil from './utility/date-util';
+import { CreatePostComponent } from './create-post/create-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlogComponent
+    BlogComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +21,8 @@ import { BlogComponent } from './components/blog/blog.component';
     HttpClientModule
   ],
   providers: [
-    BlogService
+    BlogService,
+    DateUtil
   ],
   bootstrap: [AppComponent]
 })
